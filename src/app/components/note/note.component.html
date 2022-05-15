@@ -1,0 +1,14 @@
+<div [ngClass]="setClasses()">
+  <p>
+    <input
+      (change)="onToggle(note)"
+      type="checkbox"
+      id="{{ note.id }}"
+      [checked]="note.completed"
+    />
+    <label for="{{ note.id }}">
+      {{ note.title }}
+    </label>
+    <button (click)="onDelete(note)" class="del">X</button>
+  </p>
+</div>
